@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.chadwiedemann.yourstopcommuter.MainActivity">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:adjustViewBounds="true"
+        android:scaleType="centerCrop"
+        android:src="@drawable/dallas" />
+
+        <TextView
+            android:id="@+id/your_stop_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:paddingTop="80dp"
+            android:text="YourStop"
+            android:textColor="#ff8000"
+            android:textSize="48sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            />
+
+        <ImageView
+            android:id="@+id/logo"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:alpha="0.85"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_centerHorizontal="true"
+            android:paddingTop="48dp"
+            android:src="@drawable/your_stop_logo"
+            app:layout_constraintTop_toBottomOf="@+id/your_stop_label"
+            />
+
+        <Button
+            android:layout_width="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_height="40dp"
+            android:text="My Locations"
+            app:layout_constraintTop_toBottomOf="@+id/logo"
+            android:id="@+id/my_locations_button"
+            android:layout_marginTop="36dp"
+            android:background="#8527ae60"
+            android:textColor="#ffffff"
+            android:textAllCaps="false"
+            android:onClick="goToSavedLocations"
+            />
+
+        <Button
+            android:layout_width="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:textAllCaps="false"
+            android:layout_height="36dp"
+            android:text="New Location"
+            android:background="#853498db"
+            android:onClick="goToNewLocation"
+            app:layout_constraintTop_toBottomOf="@+id/my_locations_button"
+            android:layout_marginTop="16dp"
+            android:textColor="#ffffff"
+
+            />
+
+</android.support.constraint.ConstraintLayout>
